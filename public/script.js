@@ -1,7 +1,4 @@
-let age;
-let maxAge;
-let numPerDay;
-let totalRequired;
+let age, maxAge, numPerDay, totalRequired;
 
 age = window.prompt("How old are you?");
 maxAge = window.prompt("Until what age will you live?");
