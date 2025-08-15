@@ -20,17 +20,24 @@
 
         <button onclick="totalMeal()"> Accept Input </button>
 
-        <p id="outputResult"> Total Meal: </p>
+        <p> Total Meal: 
+            <span id="outputResult"> </span>
+        </p>
 
         <script>
             function totalMeal() {
-                let mealPrice = Number(document.getElementById("mealPrice").value);
-                let tip = Number(document.getElementById("tip").value);
-                let serviceCharge = Number(document.getElementById("serviceCharge").value);
+                let mealPrice = document.getElementById("mealPrice").value;
+                let tip = document.getElementById("tip").value;
+                let serviceCharge = document.getElementById("serviceCharge").value;
 
-                let totalCost = mealPrice + tip + ((serviceCharge/100)*mealPrice);
+                mealPrice = Number(mealPrice);
+                tip = Number(tip);
+                serviceCharge = Number(serviceCharge);
 
-                document.getElementById("outputResult").innerHTML = totalMeal.toFixed(2);
+                let totalCost = mealPrice + tip + (serviceCharge/100*mealPrice);
+                totalCost = totalCost.toFixed(2)
+
+                document.getElementById("outputResult").innerHTML = `${totalCost}`;
             }
         </script>
     </body>
