@@ -24,7 +24,7 @@
                 let guessNumber = document.getElementById("guess").value;
                 let result;
 
-                guessNumber = Number(guessNumber);
+                guessNumber = Number(guessNumber); //(dNumber == guessNumber) ? "You are correct" : (dNumber > guessNumber) ? "Higher" : "Lower"
                                 
                 if(dNumber == guessNumber)
                     result = "You are correct!";
